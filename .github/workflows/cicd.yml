@@ -1,6 +1,6 @@
 name: CI/CD for Dockerized Flask App
 
-on:
+'on':
   push:
     branches:
       - main
@@ -51,7 +51,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./DockerFile
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/flasktest-app:latest
 
